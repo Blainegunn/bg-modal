@@ -1,0 +1,25 @@
+{
+  "name": "bg-modal",
+  "version": "1.0.0",
+  "description": "Just modals for apps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blainegunn/bg-modal.git"
+  },
+  "keywords": [
+    "modals"
+  ],
+  "author": "Blaine Gunn <blainegunn@gmail.com> (http://twitter.com/the_horse_force)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Blainegunn/bg-modal/issues"
+  },
+  "homepage": "https://github.com/Blainegunn/bg-modal",
+  "devDependencies": {
+    "karma": "^0.12.31"
+  }
+}
