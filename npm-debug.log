@@ -1,0 +1,95 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish', '--force' ]
+2 info using npm@2.7.4
+3 info using node@v0.12.2
+4 warn using --force I sure hope you know what you are doing.
+5 verbose publish [ '.' ]
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec { raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/Users/blainergunn/bg-modal',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory /Users/blainergunn/.npm/bg-modal/1.0.0/package.tgz not in flight; packing
+10 verbose tar pack [ '/Users/blainergunn/.npm/bg-modal/1.0.0/package.tgz',
+10 verbose tar pack   '/Users/blainergunn/bg-modal' ]
+11 verbose tarball /Users/blainergunn/.npm/bg-modal/1.0.0/package.tgz
+12 verbose folder /Users/blainergunn/bg-modal
+13 info prepublish bg-modal@1.0.0
+14 verbose addLocalTarball adding from inside cache /Users/blainergunn/.npm/bg-modal/1.0.0/package.tgz
+15 silly cache afterAdd bg-modal@1.0.0
+16 verbose afterAdd /Users/blainergunn/.npm/bg-modal/1.0.0/package/package.json not in flight; writing
+17 verbose afterAdd /Users/blainergunn/.npm/bg-modal/1.0.0/package/package.json written
+18 silly publish { name: 'bg-modal',
+18 silly publish   version: '1.0.0',
+18 silly publish   description: 'Just modals for apps.',
+18 silly publish   main: 'index.js',
+18 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'https://github.com/Blainegunn/bg-modal.git' },
+18 silly publish   keywords: [ 'modals' ],
+18 silly publish   author:
+18 silly publish    { name: 'Blaine Gunn',
+18 silly publish      email: 'blainegunn@gmail.com',
+18 silly publish      url: 'http://twitter.com/the_horse_force' },
+18 silly publish   license: 'ISC',
+18 silly publish   bugs: { url: 'https://github.com/Blainegunn/bg-modal/issues' },
+18 silly publish   homepage: 'https://github.com/Blainegunn/bg-modal',
+18 silly publish   devDependencies: { karma: '^0.12.31' },
+18 silly publish   readme: 'ERROR: No README data found!',
+18 silly publish   readmeFilename: 'readme.md',
+18 silly publish   gitHead: 'b3095655de3ebbca8de77a3fa42ee1974441fee7',
+18 silly publish   _id: 'bg-modal@1.0.0',
+18 silly publish   _shasum: '1ae9328138d27d0c04d07d8b7f9d2810a8bf40f8',
+18 silly publish   _from: '.' }
+19 silly mapToRegistry name bg-modal
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/bg-modal
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /Users/blainergunn/.npm/bg-modal/1.0.0/package.tgz
+25 verbose request uri https://registry.npmjs.org/bg-modal
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 4:50:53 PM
+28 verbose request id 9d62367d52de5077
+29 http request PUT https://registry.npmjs.org/bg-modal
+30 http 403 https://registry.npmjs.org/bg-modal
+31 verbose headers { 'content-type': 'application/json',
+31 verbose headers   'cache-control': 'max-age=60',
+31 verbose headers   'content-length': '95',
+31 verbose headers   'accept-ranges': 'bytes',
+31 verbose headers   date: 'Mon, 04 May 2015 22:50:55 GMT',
+31 verbose headers   via: '1.1 varnish',
+31 verbose headers   connection: 'keep-alive',
+31 verbose headers   'x-served-by': 'cache-dfw1831-DFW',
+31 verbose headers   'x-cache': 'MISS',
+31 verbose headers   'x-cache-hits': '0',
+31 verbose headers   'x-timer': 'S1430779854.280205,VS0,VE1050' }
+32 verbose request invalidating /Users/blainergunn/.npm/registry.npmjs.org/bg-modal on PUT
+33 error publish Failed PUT 403
+34 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : bg-modal
+34 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:247:14)
+34 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+34 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:344:22)
+34 verbose stack     at Request.emit (events.js:110:17)
+34 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1239:14)
+34 verbose stack     at Request.emit (events.js:129:20)
+34 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1187:12)
+34 verbose stack     at IncomingMessage.emit (events.js:129:20)
+34 verbose stack     at _stream_readable.js:908:16
+34 verbose stack     at process._tickCallback (node.js:355:11)
+35 verbose statusCode 403
+36 verbose pkgid bg-modal
+37 verbose cwd /Users/blainergunn/bg-modal
+38 error Darwin 14.3.0
+39 error argv "node" "/usr/local/bin/npm" "publish" "--force"
+40 error node v0.12.2
+41 error npm  v2.7.4
+42 error code E403
+43 error "You cannot publish over the previously published version 1.0.0." : bg-modal
+44 error If you need help, you may report this error at:
+44 error     <https://github.com/npm/npm/issues>
+45 verbose exit [ 1, true ]
