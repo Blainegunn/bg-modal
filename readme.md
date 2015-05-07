@@ -1,8 +1,6 @@
-things this needs to work.
-
 1. Bootstrap needs to be installed
-2. create a blah.config.js with the following values. Here you could determine where the set values come from. 
-'var configs = {
-  og_session_length: 12,
-  session_countdown_time: 4
-}'
+2. Bundle the assets with webpack and have the javascript/application.js pick up the bundle.js. 
+   Example:  webpack ./something.js bundle.js
+   -the something.js simply imports the node_modules that will be needed.
+4. Inside the application.js remove 'require_tree .''
+5. Run webpack and should work just fine.
