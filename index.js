@@ -1,12 +1,13 @@
+var configs = require('./index.config');
  module.exports = {
   modal: function(){
     setTimeout(function(){
 
       var signInPage = window.location.href.includes('/sign_in');
       var counter = 0; 
-      var seshLengthOrg = 15  //document.getElementById('timeOutTime').attributes[1].value;
+      var seshLengthOrg = configs.og_session_length  //document.getElementById('timeOutTime').attributes[1].value;
       var seshLength = seshLengthOrg;  
-      var timeCountDown = 10;
+      var timeCountDown = configs.session_countdown_time;
       var oddNum = seshLength - timeCountDown;  
       var countdownNum = seshLength - oddNum;
       var body = document.getElementsByTagName('body')[0];
@@ -24,7 +25,7 @@
       modalBackground.id="myModal";
 
       modalDialog.className="modal-dialog";
-      continueBtn.className="btn btn-primary btn-lg btn-block"; //btn-block
+      continueBtn.className="btn btn-primary btn-lg btn-block"; 
 
       modalFooter.className="modal-footer";
       modalBackground.className="modal";
@@ -63,13 +64,11 @@
       modalContent.appendChild(modalFooter);
       modalFooter.appendChild(continueBtn);
 
-      //modalBackground.style.display='block';
-
       var sesh = setInterval(function(){
         counter += 1;
-        if(signInPage){
-          return;
-        };
+        // if(signInPage){
+        //   return;
+        // };
 
         //countdown
         if(counter >= seshLength - timeCountDown){
@@ -97,7 +96,7 @@
         modalBackground.style.display="none";
         seshLength = seshLengthOrg;
         counter = 0;
-        timeCountDown = 10;
+        timeCountDown = configs.session_countdown_time;
         continueBtnFunc();
       };
 
