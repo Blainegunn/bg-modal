@@ -3,7 +3,7 @@ var configs = require('./index.config');
   modal: function(){
     setTimeout(function(){
 
-      var signInPage = window.location.href.includes('/sign_in');
+      var signInPage = window.location.href.match('/sign_in');
       var counter = 0; 
       var seshLengthOrg = configs.og_session_length  //document.getElementById('timeOutTime').attributes[1].value;
       var seshLength = seshLengthOrg;  
@@ -33,28 +33,26 @@ var configs = require('./index.config');
       modalHeader.className="modal-header";
       modalBody.className="modal-body";
       closeBtn.className="close";
-      modalTitle.className="modal-title"
+      modalTitle.className="modal-title";
 
       closeBtn.type='button';
 
       modalBackground.style.position="absolute";
       modalBackground.style.backgroundColor="#000";
-      modalBackground.style.opacity=".7"
+      modalBackground.style.opacity=".7";
 
       modalDialog.style.zIndex="33333";
       modalDialog.style.top="-75%";
       modalDialog.style.display='none';
 
-
-
-      continueBtn.innerText="Continue";
-      modalBody.innerText= "Your session will timeout in " + timeCountDown + " seconds, if you wish to remain logged in please click 'Continue'. "
-      modalTitle.innerText="Session Timeout"
-      closeBtn.innerHTML="<span aria-hidden='true'>×</span>" 
+      continueBtn.textContent="Continue";
+      modalBody.textContent= "Your session will timeout in " + timeCountDown + " seconds, if you wish to remain logged in please click 'Continue'. ";
+      modalTitle.textContent="Session Timeout";
+      closeBtn.innerHTML="<span aria-hidden='true'>×</span>"; 
 
       //building the modal 
 
-      body.appendChild(modalDialog)
+      body.appendChild(modalDialog);
       body.insertBefore(modalBackground, body.firstChild);
       modalDialog.appendChild(modalContent);
       modalContent.appendChild(modalHeader);
@@ -66,15 +64,15 @@ var configs = require('./index.config');
 
       var sesh = setInterval(function(){
         counter += 1;
-        // if(signInPage){
-        //   return;
-        // };
+         if(signInPage){
+           return;
+         };
 
         //countdown
         if(counter >= seshLength - timeCountDown){
           modalBackground.style.display='block';
           modalDialog.style.display='block';
-          modalBody.innerText = modalBody.innerText='Your session will timeout in ' + timeCountDown + ' seconds, if you wish to remain logged in please click "Continue". \n \n ';
+          modalBody.textContent = modalBody.innerText='Your session will timeout in ' + timeCountDown + ' seconds, if you wish to remain logged in please click "Continue". \n \n ';
           timeCountDown -= 1;
         };
 
@@ -104,8 +102,8 @@ var configs = require('./index.config');
         modalDialog.style.display="none";
         modalBackground.style.display="none";
       };
-    },500)
+    },500);
     
     return 
   }
- }
+ };
