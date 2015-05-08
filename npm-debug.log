@@ -40,7 +40,7 @@
 17 silly publish   devDependencies: { karma: '^0.12.31' },
 17 silly publish   readme: '1. Bootstrap needs to be installed\n2. Bundle the assets with webpack and have the javascript/application.js pick up the bundle.js. \n   Example:  webpack ./something.js bundle.js\n   -the something.js simply imports the node_modules that will be needed.\n4. Inside the application.js remove \'require_tree .\'\'\n5. Run webpack and should work just fine.',
 17 silly publish   readmeFilename: 'readme.md',
-17 silly publish   gitHead: '482294d8a9fa1a66b6de5b2984977b2aaad03105',
+17 silly publish   gitHead: '6f3937fa3339ec6b0ccf1191c5967ea3260a0622',
 17 silly publish   _id: 'bg-modal@1.0.4',
 17 silly publish   _shasum: 'c91c75a10c2587f421ca27b11c610ee269776cf2',
 17 silly publish   _from: '.' }
@@ -52,21 +52,21 @@
 23 silly publish uploading /Users/blainergunn/.npm/bg-modal/1.0.4/package.tgz
 24 verbose request uri https://registry.npmjs.org/bg-modal
 25 verbose request sending authorization for write operation
-26 info attempt registry request try #1 at 2:02:32 PM
-27 verbose request id ff5a57f5d4d47860
+26 info attempt registry request try #1 at 2:03:18 PM
+27 verbose request id 6e537d896defeb2d
 28 http request PUT https://registry.npmjs.org/bg-modal
 29 http 403 https://registry.npmjs.org/bg-modal
 30 verbose headers { 'content-type': 'application/json',
 30 verbose headers   'cache-control': 'max-age=60',
 30 verbose headers   'content-length': '95',
 30 verbose headers   'accept-ranges': 'bytes',
-30 verbose headers   date: 'Fri, 08 May 2015 20:02:32 GMT',
+30 verbose headers   date: 'Fri, 08 May 2015 20:03:20 GMT',
 30 verbose headers   via: '1.1 varnish',
 30 verbose headers   connection: 'keep-alive',
-30 verbose headers   'x-served-by': 'cache-atl6226-ATL',
+30 verbose headers   'x-served-by': 'cache-ord1734-ORD',
 30 verbose headers   'x-cache': 'MISS',
 30 verbose headers   'x-cache-hits': '0',
-30 verbose headers   'x-timer': 'S1431115352.488658,VS0,VE213' }
+30 verbose headers   'x-timer': 'S1431115398.969518,VS0,VE1107' }
 31 verbose request invalidating /Users/blainergunn/.npm/registry.npmjs.org/bg-modal on PUT
 32 error publish Failed PUT 403
 33 verbose stack Error: "You cannot publish over the previously published version 1.0.4." : bg-modal
