@@ -5,8 +5,8 @@ var configs = require('./index.config');
 
       var signInPage = window.location.href.match('/sign_in');
       var counter = 0; 
-      var seshLengthOrg = configs.og_session_length  //document.getElementById('timeOutTime').attributes[1].value;
-      var seshLength = seshLengthOrg;  
+      var seshLengthOrg = document.getElementById('timeOutTime').attributes[1].value;
+      var seshLength = seshLengthOrg;
       var timeCountDown = configs.session_countdown_time;
       var oddNum = seshLength - timeCountDown;  
       var countdownNum = seshLength - oddNum;
@@ -42,17 +42,20 @@ var configs = require('./index.config');
       modalBackground.style.opacity=".7";
 
       modalDialog.style.zIndex="33333";
-      modalDialog.style.top="-75%";
       modalDialog.style.display='none';
+      modalDialog.style.left="0";
+      modalDialog.style.right="0";
+      modalDialog.style.top="10%"
+      modalDialog.style.position="absolute";
 
       continueBtn.textContent="Continue";
       modalBody.textContent= "Your session will timeout in " + timeCountDown + " seconds, if you wish to remain logged in please click 'Continue'. ";
       modalTitle.textContent="Session Timeout";
-      closeBtn.innerHTML="<span aria-hidden='true'>×</span>"; 
+      closeBtn.innerHTML="<span aria-hidden='true'>&#x2716;</span>"; 
 
       //building the modal 
 
-      body.appendChild(modalDialog);
+      body.insertBefore(modalDialog, body.firstChild);
       body.insertBefore(modalBackground, body.firstChild);
       modalDialog.appendChild(modalContent);
       modalContent.appendChild(modalHeader);
@@ -107,3 +110,4 @@ var configs = require('./index.config');
     return 
   }
  };
+module.exports.modal();
